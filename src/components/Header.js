@@ -21,7 +21,6 @@ const showNothing = () => {
     </h2>
   </div>)
 }
-
 export default function Header(props) {
   let [cartOpen, setCartOpen] = useState(false)
 
@@ -30,6 +29,13 @@ export default function Header(props) {
         <div>
             <FiCoffee />
             <span className='logo'>TeaCatalog</span>
+            <input type="text" placeholder="Search.."
+              className='search-bar'
+              onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                props.search(event.target.value) 
+              }
+            }}></input>
             <ul className='nav'>
               <li>about us</li>
               <li>contacts</li>

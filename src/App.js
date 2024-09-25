@@ -2,12 +2,14 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Items from "./components/Items";
+import Categories from "./components/Categories";
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       orders: [],
+      currentItems: [],
       items: [
         {
           id: 1,
@@ -38,19 +40,43 @@ class App extends React.Component {
         }
       ]
     }
+    this.state.currentItems = this.state.items
     this.addToOrder = this.addToOrder.bind(this)
     this.deleteOrder = this.deleteOrder.bind(this)
     this.order = this.order.bind(this)
+    this.selectCategory = this.selectCategory.bind(this)
+    this.search = this.search.bind(this)
   }
   render() {
     return (
       <div className="wrapper">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder} onOrder={this.order}/>
-        <Items items={this.state.items} onAdd={this.addToOrder}/>
+        <Header orders={this.state.orders} search={this.search}
+        onDelete={this.deleteOrder} onOrder={this.order}/>
+        <Categories selectCategory={this.selectCategory} />
+        <Items items={this.state.currentItems} onAdd={this.addToOrder}/>
         <Footer />
       </div>
     )
   }
+  search(name) {
+    if (name === "") {
+      this.setState({currentItems: this.state.items})
+      return
+    }
+    this.setState({
+      currentItems: this.state.items.filter(el => el.title.toLowerCase().includes(name.toLowerCase()) )
+    })
+  }
+  selectCategory(category) {
+    if (category === 'all') {
+      this.setState({currentItems: this.state.items})
+      return
+    }
+    this.setState({
+      currentItems: this.state.items.filter(el => el.category === category)
+    })
+  }
+
   order() {
     this.setState({ orders: [] })
   }
