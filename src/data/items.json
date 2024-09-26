@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "title": "Green tea",
+      "img": "green_tea.jpg",
+      "desc": "adasafewfewfwefwfewffw\nfewffwefgregergaergag",
+      "category": "green",
+      "price": 10.00,
+      "number": 1
+    },
+    {
+      "id": 2,
+      "title": "Black tea",
+      "img": "black-tea.png",
+      "desc": "adasafewfewfwefwfewffw\nfewffwefgregergaergag",
+      "category": "black",
+      "price": 10.00,
+      "number": 1
+    },
+    {
+      "id": 3,
+      "title": "Mactha tea",
+      "img": "matcha-tea.jpg",
+      "desc": "adasafewfewfwefwfewff\nwfewffwefgregergaergag",
+      "category": "powder",
+      "price": 10.00,
+      "number": 1
+    }
+  ]

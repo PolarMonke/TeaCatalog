@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Items from "./components/Items";
 import Categories from "./components/Categories";
+import itemsData from "./data/items.json"; 
+
+
 
 class App extends React.Component {
   constructor(props) {
@@ -10,35 +13,7 @@ class App extends React.Component {
     this.state = {
       orders: [],
       currentItems: [],
-      items: [
-        {
-          id: 1,
-          title: "Green tea",
-          img: "green_tea.jpg",
-          desc: "adasafewfewfwefwfewffw\nfewffwefgregergaergag",
-          category: "green",
-          price: 10.00,
-          number: 1
-        },
-        {
-          id: 2,
-          title: "Black tea",
-          img: "black-tea.png",
-          desc: "adasafewfewfwefwfewffw\nfewffwefgregergaergag",
-          category: "black",
-          price: 10.00,
-          number: 1
-        },
-        {
-          id: 3,
-          title: "Mactha tea",
-          img: "matcha-tea.jpg",
-          desc: "adasafewfewfwefwfewff\nwfewffwefgregergaergag",
-          category: "powder",
-          price: 10.00,
-          number: 1
-        }
-      ]
+      items: []
     }
     this.state.currentItems = this.state.items
     this.addToOrder = this.addToOrder.bind(this)
@@ -46,6 +21,10 @@ class App extends React.Component {
     this.order = this.order.bind(this)
     this.selectCategory = this.selectCategory.bind(this)
     this.search = this.search.bind(this)
+  }
+  componentDidMount() {
+    this.setState({ items: itemsData }); 
+    this.setState({ currentItems: itemsData });
   }
   render() {
     return (
@@ -76,9 +55,8 @@ class App extends React.Component {
       currentItems: this.state.items.filter(el => el.category === category)
     })
   }
-
   order() {
-    this.setState({ orders: [] })
+    alert("code")
   }
   deleteOrder(id) {
     const updatedOrders = this.state.orders.map(order => {

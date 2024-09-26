@@ -2,16 +2,20 @@ import React, { useState } from 'react'
 import { FiShoppingCart } from "react-icons/fi";
 import { FiCoffee } from "react-icons/fi";
 import Order from './Order';
+import Registration from './Registration';
 
 const showOrders = (props) => {
+  let regOpen = false
   let sum = 0
   props.orders.forEach(el => sum += el.price);
+  let registrationOpen = false
   return (<div>
     {props.orders.map(el  => (
       <Order onDelete={props.onDelete} key={el.id} item={el}/>
     ))}
     <p className='sum'>Sum: {new Intl.NumberFormat().format(sum)} BYN</p>
-    <div className='order' onClick={() => props.onOrder()}>Order</div>
+    <div className='order' onClick={() => props.toggleRegistration()}>To order</div>
+    {props.registrationOpen && <Registration />} 
   </div>)
 }
 const showNothing = () => {
@@ -23,7 +27,11 @@ const showNothing = () => {
 }
 export default function Header(props) {
   let [cartOpen, setCartOpen] = useState(false)
+  let [registrationOpen, setRegistrationOpen] = useState(false);
 
+  const toggleRegistration = () => {
+    setRegistrationOpen(!registrationOpen);
+  }
   return (
     <header>
         <div>
@@ -43,8 +51,8 @@ export default function Header(props) {
             <FiShoppingCart onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shopping-cart-button ${cartOpen && 'active'}`} />
             {cartOpen && (
               <div className='shopping-cart'>
-                {props.orders.length > 0 ?
-                showOrders(props) : showNothing()}
+              {props.orders.length > 0 ?
+                showOrders({ ...props, registrationOpen, toggleRegistration }) : showNothing()}
               </div>
             )}
         </div>
