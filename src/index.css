@@ -143,8 +143,7 @@ header .shopping-cart .registration {
     z-index:1001;
     padding: 20px;
     padding-bottom: 0px;
-    left:-200px;
-    top: 50px;
+    left: -230px;
 }
 header .shopping-cart .registration .submit {
     background: #ca5252;
