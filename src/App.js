@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Items from "./components/Items";
 import Categories from "./components/Categories";
 import itemsData from "./data/items.json"; 
+import Registration from "./components/Registration";
 
 
 
@@ -56,7 +57,7 @@ class App extends React.Component {
     })
   }
   order() {
-    alert("code")
+    alert("ordered")
   }
   deleteOrder(id) {
     const updatedOrders = this.state.orders.map(order => {

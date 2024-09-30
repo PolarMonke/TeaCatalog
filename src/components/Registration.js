@@ -5,7 +5,9 @@ export class Registration extends Component {
     super(props)
     this.state = {
       phone: "",
-      code: 0
+      code: 0,
+      enteredCode: '',
+      error: null
     }
   }
 
@@ -16,15 +18,19 @@ export class Registration extends Component {
       const minCeiled = Math.ceil(1000)
       const maxFloored = Math.floor(9999)
       const code = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled)
-      this.setState({code})
+      this.setState({code, error: null })
+      alert(code)
     }
     else {
-      alert('Please enter a valid phone number ');
+      this.setState({error: "Please enter a valid phone number"})
     }
   }
+  checkCode = () =>
+  {
 
+  }
   handlePhoneChange = (event) => {
-    this.setState({ phone: event.target.value })
+    this.setState({ phone: event.target.value, error: null })
   }
 
   handleKeyDown(event) {
@@ -32,21 +38,34 @@ export class Registration extends Component {
       this.sendCode();
     }
   }
-
+  handleCodeChange = (event) => {
+    this.setState({ enteredCode: event.target.value, error: null }); // Clear error on change
+  }
+  handleOrder = () => {
+    if (this.state.enteredCode === this.state.code.toString()) {
+      this.props.order(); 
+    } else {
+      this.setState({ error: 'Incorrect code' });
+    }
+  }
   render() {
     return (
       <div className='registration'>
         <div className='reg-text'>Your phone number:</div>
         <input className='phone'
         onChange={this.handlePhoneChange} 
-        onKeyDown={this.handleKeyDown}></input>
+        //onKeyDown={this.handleKeyDown} FIXME
+        >
+        </input>
         <div className='submit'
         onClick={this.sendCode}
         onKeyDown={this.handleKeyDown}
         >Send code</div>
         <div className='reg-text'>Code that we sent you:</div>
-        <input className='code' value={this.state.code || ''} />
-        <div className='submit' disabled>Order</div>
+        <input className='code' value={this.state.enteredCode}
+        onChange={this.handleCodeChange} />
+        <div className='submit' onClick={this.handleOrder}>Order</div>
+        {this.state.error && <div className="error">{this.state.error}</div>}
       </div>
     )
   }

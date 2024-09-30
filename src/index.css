@@ -31,7 +31,8 @@ header .search-bar {
     border:1px solid transparent;
     transition: all 500ms ease;
     position: absolute;
-    left: 50%;
+    left: 30%;
+    width: 30%;
     top: -10px;
 }
 header .search-bar:hover {
@@ -41,6 +42,10 @@ header .search-bar:hover {
 header ul.nav {
     float:right;
     list-style: none;
+}
+header ul.nav a {
+    color: #222;
+    text-decoration: 0;
 }
 header ul.nav li {
     display: inline;
@@ -173,6 +178,11 @@ header .shopping-cart .registration input:hover {
     border-color: silver;
     transform: scale(1.1);
 }
+header .shopping-cart .registration .error {
+    color: red;
+    padding-bottom: 20px;
+  }
+  
 header .presentation {
     margin: 50px 0;
     background: url('./img/tea_bg.jpg') no-repeat;

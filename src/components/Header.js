@@ -5,10 +5,8 @@ import Order from './Order';
 import Registration from './Registration';
 
 const showOrders = (props) => {
-  let regOpen = false
   let sum = 0
   props.orders.forEach(el => sum += el.price);
-  let registrationOpen = false
   return (<div>
     {props.orders.map(el  => (
       <Order onDelete={props.onDelete} key={el.id} item={el}/>
@@ -45,8 +43,8 @@ export default function Header(props) {
               }
             }}></input>
             <ul className='nav'>
-              <li>about us</li>
-              <li>contacts</li>
+              <a href='https://github.com/PolarMonke/TeaCatalog'><li>about us</li></a>
+              <a href='https://www.yxtwitter.com/'><li>sponsor</li></a>
             </ul>
             <FiShoppingCart onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shopping-cart-button ${cartOpen && 'active'}`} />
             {cartOpen && (
