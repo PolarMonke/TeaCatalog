@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import Items from "./components/Items";
 import Categories from "./components/Categories";
 import itemsData from "./data/items.json"; 
-import Registration from "./components/Registration";
 
 
 
@@ -19,9 +18,9 @@ class App extends React.Component {
     this.state.currentItems = this.state.items
     this.addToOrder = this.addToOrder.bind(this)
     this.deleteOrder = this.deleteOrder.bind(this)
-    this.order = this.order.bind(this)
     this.selectCategory = this.selectCategory.bind(this)
     this.search = this.search.bind(this)
+    this.emptyShoppingCart = this.emptyShoppingCart.bind(this)
   }
   componentDidMount() {
     this.setState({ items: itemsData }); 
@@ -31,7 +30,7 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <Header orders={this.state.orders} search={this.search}
-        onDelete={this.deleteOrder} onOrder={this.order}/>
+        onDelete={this.deleteOrder} onOrder={this.order} emptyShoppingCart={this.emptyShoppingCart} />
         <Categories selectCategory={this.selectCategory} />
         <Items items={this.state.currentItems} onAdd={this.addToOrder}/>
         <Footer />
@@ -56,8 +55,8 @@ class App extends React.Component {
       currentItems: this.state.items.filter(el => el.category === category)
     })
   }
-  order() {
-    alert("ordered")
+  emptyShoppingCart() {
+    this.setState({ orders: [] }); 
   }
   deleteOrder(id) {
     const updatedOrders = this.state.orders.map(order => {

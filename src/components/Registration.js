@@ -10,7 +10,6 @@ export class Registration extends Component {
       error: null
     }
   }
-
   sendCode = () => {
     const phoneRegex = /^[+]?(\d{3})[-. ]?(\d{2})[-. ]?(\d{3})[-. ]?(\d{2})[-. ]?(\d{2})$/
     if (phoneRegex.test(this.state.phone))
@@ -25,10 +24,6 @@ export class Registration extends Component {
       this.setState({error: "Please enter a valid phone number"})
     }
   }
-  checkCode = () =>
-  {
-
-  }
   handlePhoneChange = (event) => {
     this.setState({ phone: event.target.value, error: null })
   }
@@ -39,15 +34,23 @@ export class Registration extends Component {
     }
   }
   handleCodeChange = (event) => {
-    this.setState({ enteredCode: event.target.value, error: null }); // Clear error on change
+    this.setState({ enteredCode: event.target.value, error: null });
+  }
+  saveCartToJSON = () => {
+    const shoppingCart = this.props.shoppingCart || [];
+    const jsonCart = JSON.stringify(shoppingCart)
+    localStorage.setItem("shoppingCart", jsonCart)
   }
   handleOrder = () => {
     if (this.state.enteredCode === this.state.code.toString()) {
-      this.props.order(); 
+      this.saveCartToJSON();
+      this.props.emptyShoppingCart();
     } else {
       this.setState({ error: 'Incorrect code' });
     }
   }
+  
+  
   render() {
     return (
       <div className='registration'>

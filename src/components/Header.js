@@ -13,7 +13,11 @@ const showOrders = (props) => {
     ))}
     <p className='sum'>Sum: {new Intl.NumberFormat().format(sum)} BYN</p>
     <div className='order' onClick={() => props.toggleRegistration()}>To order</div>
-    {props.registrationOpen && <Registration />} 
+    {props.registrationOpen && <Registration 
+    shoppingCart={props.orders}
+    emptyShoppingCart={props.emptyShoppingCart}
+    order={props.onOrder}
+    />} 
   </div>)
 }
 const showNothing = () => {
