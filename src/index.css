@@ -7,7 +7,7 @@
 
 body {
     background: #ffffff;
-    color: #222;
+    color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
@@ -44,7 +44,7 @@ header ul.nav {
     list-style: none;
 }
 header ul.nav a {
-    color: #222;
+    color: #000000;
     text-decoration: 0;
 }
 header ul.nav li {
