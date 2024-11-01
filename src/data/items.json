@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Green tea",
       "img": "green_tea.jpg",
-      "desc": "adasafewfewfwefwfewffw\nfewffwefgregergaergag",
+      "desc": "Неферментированный чай, сохранивший больше антиоксидантов.",
       "category": "green",
       "price": 10.00,
       "number": 1
@@ -12,18 +12,81 @@
       "id": 2,
       "title": "Black tea",
       "img": "black-tea.png",
-      "desc": "adasafewfewfwefwfewffw\nfewffwefgregergaergag",
+      "desc": "Самый распространённый вид, который проходит полную ферментацию.",
       "category": "black",
-      "price": 10.00,
+      "price": 12.00,
       "number": 1
     },
     {
       "id": 3,
       "title": "Mactha tea",
       "img": "matcha-tea.jpg",
-      "desc": "adasafewfewfwefwfewff\nwfewffwefgregergaergag",
+      "desc": "Порошковый зелёный чай, используемый в японских чайных церемониях.",
       "category": "powder",
-      "price": 10.00,
+      "price": 15.00,
+      "number": 1
+    },
+    {
+      "id": 4,
+      "title": "Oolong tea",
+      "img": "matcha-tea.jpg",
+      "desc": "Частично ферментированный чай, находящийся между чёрным и зелёным.",
+      "category": "black",
+      "price": 13.00,
+      "number": 1
+    },
+    {
+      "id": 5,
+      "title": "Puer tea",
+      "img": "matcha-tea.jpg",
+      "desc": "Ферментированный чай, который может быть как сырым, так и зрелым.",
+      "category": "black",
+      "price": 16.00,
+      "number": 1
+    },
+    {
+      "id": 6,
+      "title": "Herbal tea",
+      "img": "matcha-tea.jpg",
+      "desc": "Не содержит чайных листьев, а готовится из трав, цветов или фруктов.",
+      "category": "herbal infusion",
+      "price": 12.00,
+      "number": 1
+    },
+    {
+      "id": 7,
+      "title": "Jasmine tea",
+      "img": "matcha-tea.jpg",
+      "desc": "Зелёный или чёрный чай, ароматизированный цветами жасмина, придающий ему цветочный и сладкий аромат.",
+      "category": "green",
+      "price": 17.00,
+      "number": 1
+    },
+    {
+      "id": 8,
+      "title": "Kukicha tea",
+      "img": "matcha-tea.jpg",
+      "desc": "Японский чай, который представляет собой смесь из черенков, стеблей и листьев японских чаев.",
+      "category": "green",
+      "price": 19.00,
+      "number": 1
+    },
+    {
+      "id": 9,
+      "title": "Rosehip tea",
+      "img": "matcha-tea.jpg",
+      "desc": "Ароматный и богатый витамином C травяной чай.",
+      "category": "herbal infusion",
+      "price": 13.00,
+      "number": 1
+    },
+    {
+      "id": 10    ,
+      "title": "Rooibos tea",
+      "img": "matcha-tea.jpg",
+      "desc": "Южноафриканский чай без кофеина, обладающий сладковато-ореховым вкусом и насыщённым красным цветом.",
+      "category": "herbal infusion",
+      "price": 21.00,
       "number": 1
     }
   ]
