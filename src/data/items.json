@@ -29,7 +29,7 @@
     {
       "id": 4,
       "title": "Oolong tea",
-      "img": "matcha-tea.jpg",
+      "img": "oolong.jpg",
       "desc": "Partially fermented tea, somewhere between black and green.",
       "category": "black",
       "price": 13.00,
@@ -38,7 +38,7 @@
     {
       "id": 5,
       "title": "Puer tea",
-      "img": "matcha-tea.jpg",
+      "img": "puer.jpg",
       "desc": "Fermented tea, which can be either raw or mature.",
       "category": "black",
       "price": 16.00,
@@ -47,7 +47,7 @@
     {
       "id": 6,
       "title": "Herbal tea",
-      "img": "matcha-tea.jpg",
+      "img": "herbal.jpg",
       "desc": "It does not contain tea leaves, but is made from herbs, flowers or fruits.",
       "category": "herbal infusion",
       "price": 12.00,
@@ -56,7 +56,7 @@
     {
       "id": 7,
       "title": "Jasmine tea",
-      "img": "matcha-tea.jpg",
+      "img": "jasmine.jpg",
       "desc": "Green or black tea flavoured with jasmine flowers, giving it a floral and sweet aroma.",
       "category": "green",
       "price": 17.00,
@@ -65,7 +65,7 @@
     {
       "id": 8,
       "title": "Kukicha tea",
-      "img": "matcha-tea.jpg",
+      "img": "kukicha.jpg",
       "desc": "Japanese tea, which is a mixture of cuttings, stems and leaves of Japanese teas.",
       "category": "green",
       "price": 19.00,
@@ -74,7 +74,7 @@
     {
       "id": 9,
       "title": "Rosehip tea",
-      "img": "matcha-tea.jpg",
+      "img": "rosehip.jpg",
       "desc": "Aromatic and rich in vitamin C herbal tea.",
       "category": "herbal infusion",
       "price": 13.00,
@@ -83,16 +83,16 @@
     {
       "id": 10    ,
       "title": "Rooibos tea",
-      "img": "matcha-tea.jpg",
+      "img": "rooibos.jpg",
       "desc": "A South African decaffeinated tea with a sweet, nutty flavour and rich red colour.",
-      "category": "red tea",
+      "category": "red",
       "price": 21.00,
       "number": 1
     },
     {
       "id": 11    ,
       "title": "Tea with thyme",
-      "img": "matcha-tea.jpg",
+      "img": "thyme.jpg",
       "desc": "A tea that has calming properties and is often used to improve digestion.",
       "category": "herbal infusion",
       "price": 9.00,
@@ -101,16 +101,16 @@
      {
       "id": 12    ,
       "title": "White tea",
-      "img": "matcha-tea.jpg",
+      "img": "white.jpg",
       "desc": "Minimally processed tea made from young buds and leaves.",
-      "category": "white tea",
+      "category": "white",
       "price": 22.00,
       "number": 1
     },
       {
       "id": 13    ,
       "title": "Cranberry tea",
-      "img": "matcha-tea.jpg",
+      "img": "cranberry.jpg",
       "desc": "A refreshing herbal tea with a sour taste and rich in antioxidants.",
       "category": "herbal infusion",
       "price": 18.00,
@@ -119,16 +119,16 @@
      {
       "id": 14    ,
       "title": "Hibiscus tea",
-      "img": "matcha-tea.jpg",
+      "img": "hibiscus.jpg",
       "desc": "Bright red herbal tea with a sour taste, rich in antioxidants and vitamins.",
-      "category": "red tea",
+      "category": "red",
       "price": 21.00,
       "number": 1
     },
     {
       "id": 15    ,
       "title": "Lavender tea ",
-      "img": "matcha-tea.jpg",
+      "img": "lavender.jpg",
       "desc": "A herbal tea with a floral aroma, known for its relaxing properties.",
       "category": "herbal infusion",
       "price": 23.00,
