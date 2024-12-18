@@ -16,6 +16,22 @@ export class Categories extends Component {
                 {
                     key: 'green',
                     name: 'Green'
+                },
+                {
+                    key: 'red',
+                    name: 'Red'
+                },
+                {
+                    key: 'white',
+                    name: 'White'
+                },
+                {
+                    key: 'powder',
+                    name: 'Powder'
+                },
+                {
+                    key: 'herbal infusion',
+                    name: 'Herbal infusion'
                 }
             ]
         }
