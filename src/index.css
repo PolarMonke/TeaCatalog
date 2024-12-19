@@ -36,7 +36,7 @@ header .search-bar {
     top: -10px;
 }
 header .search-bar:hover {
-    border-color: silver;
+    border-color: purple;
     transform: scale(1.1);
 }
 header ul.nav {
@@ -195,7 +195,7 @@ header .presentation {
     position:relative;
 }
 header .presentation::after {
-    content: 'Tea shop';
+    content: 'Tea catalog';
     position: absolute;
     top: 100px;
     left: 50px;
@@ -226,7 +226,7 @@ header .presentation::before {
     transition: all 500ms ease;
 }
 .categories div:hover {
-    border-color: silver;
+    border-color: purple;
     transform: scale(1.1);
 }
 main {
